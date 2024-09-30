@@ -19,7 +19,7 @@ public class Person
 
     public string Name // Just Private property/field can access
     {
-         get => _name.ToUpper();
+         get => _name;
          
 
          set
@@ -37,7 +37,7 @@ public class Person
     public string MiddleName{ get; set; }
 
 
-    public string FullName => $"{Name} {MiddleName}"; // Method (Method is like an action)
+    public string FullName => $"{Name} {MiddleName}".ToUpper(); // Method (Method is like an action)
 
     public int Age // Property have get or set or both
     { 

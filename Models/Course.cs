@@ -27,9 +27,14 @@ public class Course
     public void ListStudents()
     {
         Console.WriteLine($"Students of {Name} course:");
-        foreach (Person student in Students)
+
+
+        for (int count = 0; count < Students.Count; count++)
         {
-            Console.WriteLine(student.FullName);
+            string text = $"N°{count + 1} - {Students[count].FullName}";
+            Console.WriteLine(text);
         }
     }
 }
+
+
