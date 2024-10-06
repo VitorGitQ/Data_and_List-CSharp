@@ -4,15 +4,56 @@ using System.Security.Cryptography;
 using PMC;
 
 
+// STACK
 
-new ExampleException().Method1();
+Console.WriteLine("-----Stack-----");
+
+Stack<int> stack = new Stack<int>();
+
+stack.Push(1);
+stack.Push(4);
+stack.Push(3);
+stack.Push(2);
+
+foreach(int item in stack)
+{
+    Console.WriteLine(item);
+}
+
+stack.Pop();
+
+Console.WriteLine("----------");
+foreach(int item in stack)
+{
+    Console.WriteLine(item);
+}
 
 
 
+// QUEUE
+Console.WriteLine("-----Queue-----");
 
+Queue<int> queue = new Queue<int>();
 
+queue.Enqueue(1);
+queue.Enqueue(4);
+queue.Enqueue(3);
+queue.Enqueue(2);
 
+foreach(int item in queue)
+{
+    Console.WriteLine(item);
+}
 
+queue.Dequeue();
+
+Console.WriteLine("----------");
+foreach(int item in queue)
+{
+    Console.WriteLine(item);
+}
+
+// new ExampleException().Method1();
 
 
 
