@@ -4,54 +4,119 @@ using System.Security.Cryptography;
 using PMC;
 
 
-// STACK
 
-Console.WriteLine("-----Stack-----");
+Dictionary<string, string> states = new Dictionary<string, string>
+();
 
-Stack<int> stack = new Stack<int>();
+states.Add("BA", "Bahia");
+states.Add("SP", "São Paulo");
+states.Add("MG", "Minas Gerais");
 
-stack.Push(1);
-stack.Push(4);
-stack.Push(3);
-stack.Push(2);
-
-foreach(int item in stack)
+foreach(KeyValuePair<string, string> item in states)
 {
-    Console.WriteLine(item);
+    Console.WriteLine($"Key:{item.Key}  Value:{item.Value}");
 }
 
-stack.Pop();
+Console.WriteLine($"-------------");
 
-Console.WriteLine("----------");
-foreach(int item in stack)
+states.Remove("Ba");
+states["SP"] = "São Paulo - New";
+
+foreach(KeyValuePair<string, string> item in states)
 {
-    Console.WriteLine(item);
+    Console.WriteLine($"Key:{item.Key}  Value:{item.Value}");
+}
+
+Console.WriteLine($"-----------------------");
+
+string key = "RS";
+string value = "Rio Grande do Sul";
+Console.WriteLine($"Cheking Element {key}");
+
+if (states.ContainsKey(key)) 
+{
+    Console.WriteLine($"Value already exist: {key}");
+}
+else
+{
+    Console.WriteLine($"Value don't exist, It's safe add the key: {key}");
+}
+
+Console.WriteLine($"-----------------------");
+Console.WriteLine("Adding new Key and Value");
+states.Add(key, value );
+
+foreach(KeyValuePair<string, string> item in states)
+{
+    Console.WriteLine($"Key:{item.Key}  Value:{item.Value}");
 }
 
 
 
-// QUEUE
-Console.WriteLine("-----Queue-----");
 
-Queue<int> queue = new Queue<int>();
 
-queue.Enqueue(1);
-queue.Enqueue(4);
-queue.Enqueue(3);
-queue.Enqueue(2);
 
-foreach(int item in queue)
-{
-    Console.WriteLine(item);
-}
 
-queue.Dequeue();
 
-Console.WriteLine("----------");
-foreach(int item in queue)
-{
-    Console.WriteLine(item);
-}
+
+
+
+
+
+
+
+
+
+
+
+// // STACK
+
+// Console.WriteLine("-----Stack-----");
+
+// Stack<int> stack = new Stack<int>();
+
+// stack.Push(1);
+// stack.Push(4);
+// stack.Push(3);
+// stack.Push(2);
+
+// foreach(int item in stack)
+// {
+//     Console.WriteLine(item);
+// }
+
+// stack.Pop();
+
+// Console.WriteLine("----------");
+// foreach(int item in stack)
+// {
+//     Console.WriteLine(item);
+// }
+
+
+
+// // QUEUE
+// Console.WriteLine("-----Queue-----");
+
+// Queue<int> queue = new Queue<int>();
+
+// queue.Enqueue(1);
+// queue.Enqueue(4);
+// queue.Enqueue(3);
+// queue.Enqueue(2);
+
+// foreach(int item in queue)
+// {
+//     Console.WriteLine(item);
+// }
+
+// queue.Dequeue();
+
+// Console.WriteLine("----------");
+// foreach(int item in queue)
+// {
+//     Console.WriteLine(item);
+// }
 
 // new ExampleException().Method1();
 
