@@ -1,35 +1,49 @@
 ﻿using ModelPerson;
 using ModelCourse;
 using System.Security.Cryptography;
+using PMC;
 
 
-try // If occurred a wrong, your program doesn't stop and takes care of that error
-{
 
-    string[] lines = File.ReadAllLines("Folders/FileRead.txt");
+new ExampleException().Method1();
 
-    foreach(string line in lines)
-    {
-        Console.WriteLine(line);
-    }
 
-} 
-catch(FileNotFoundException ex) 
-{
-    Console.WriteLine($"An error occurred while reading the file. File doesn't found. {ex.Message}");
-}
-catch(DirectoryNotFoundException ex) 
-{
-    Console.WriteLine($"An error occurred while reading the file. Directory doesn't found. {ex.Message}");
-}
-catch(Exception ex)
-{
-    Console.WriteLine($"A generic exception occurred: {ex.Message}");
-}
-finally
-{
-    Console.WriteLine($"IT GOT HERE!!!");
-}
+
+
+
+
+
+
+
+
+
+// try // If occurred a wrong, your program doesn't stop and takes care of that error
+// {
+
+//     string[] lines = File.ReadAllLines("Folders/FileRead.txt");
+
+//     foreach(string line in lines)
+//     {
+//         Console.WriteLine(line);
+//     }
+
+// } 
+// catch(FileNotFoundException ex) 
+// {
+//     Console.WriteLine($"An error occurred while reading the file. File doesn't found. {ex.Message}");
+// }
+// catch(DirectoryNotFoundException ex) 
+// {
+//     Console.WriteLine($"An error occurred while reading the file. Directory doesn't found. {ex.Message}");
+// }
+// catch(Exception ex)
+// {
+//     Console.WriteLine($"A generic exception occurred: {ex.Message}");
+// }
+// finally
+// {
+//     Console.WriteLine($"IT GOT HERE!!!");
+// }
 
 
 
