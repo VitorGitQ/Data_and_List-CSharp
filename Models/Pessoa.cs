@@ -13,6 +13,11 @@ public class Person
         MiddleName = middleName;
     }
 
+    public void Deconstruct(out string name, out string middleName)
+    {
+        name = Name;
+        middleName = MiddleName;
+    }
     private string _name; // Just Private property/field can access (We call encapsulation)
 
     private int _age; // Field is just a variable
